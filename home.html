@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Trading Platform</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Crypto Trading Platform</h1>
+    </header>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Market</a>
+        <a href="#">Trade</a>
+        <a href="#">Wallet</a>
+        <a href="#">Support</a>
+        <a href="#">Account</a>
+    </nav>
+    <section class="hero">
+        <div class="container">
+            <h2>Trade Crypto with Confidence</h2>
+            <p>Explore the latest trends and trade with ease on our secure and intuitive platform.</p>
+        </div>
+    </section>
+    <section class="section">
+        <div class="container">
+            <h2>Market Data</h2>
+            <div class="market-data">
+                <div id="price-data">
+                    <h3>Current Prices</h3>
+                    <p>Loading...</p>
+                </div>
+                <div id="volume-data">
+                    <h3>Trading Volumes</h3>
+                    <p>Loading...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section">
+        <div class="container">
+            <h2>Features</h2>
+            <div class="cards">
+                <div class="card">
+                    <img src="feature1.jpg" alt="Feature 1">
+                    <h3>Real-Time Market Data</h3>
+                    <p>Stay updated with real-time cryptocurrency market data.</p>
+                </div>
+                <div class="card">
+                    <img src="feature2.jpg" alt="Feature 2">
+                    <h3>Advanced Charting Tools</h3>
+                    <p>Analyze trends with our advanced charting tools.</p>
+                </div>
+                <div class="card">
+                    <img src="feature3.jpg" alt="Feature 3">
+                    <h3>Secure Transactions</h3>
+                    <p>Your transactions are secure with our top-notch encryption.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section">
+        <div class="container">
+            <h2>Latest News</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3>News Title 1</h3>
+                    <p>Latest news article description goes here. Stay informed with our latest updates.</p>
+                </div>
+                <div class="card">
+                    <h3>News Title 2</h3>
+                    <p>Another news article description. Get insights into market trends and more.</p>
+                </div>
+                <div class="card">
+                    <h3>News Title 3</h3>
+                    <p>More updates and information on the crypto market. Read our articles to stay ahead.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section">
+        <div class="container">
+            <h2>Account Management</h2>
+            <p>Log in to manage your account, check your transaction history, and more.</p>
+            <button onclick="location.href='login.html'">Log In</button>
+            <button onclick="location.href='register.html'">Register</button>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 Crypto Trading Platform. All rights reserved.</p>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Example data - replace with API calls in a real application
+            const priceData = {
+                "BTC": "$26,000",
+                "ETH": "$1,600",
+                "XRP": "$0.50"
+            };
+
+            const volumeData = {
+                "BTC": "1,500 BTC",
+                "ETH": "30,000 ETH",
+                "XRP": "500,000 XRP"
+            };
+
+            const priceContainer = document.getElementById('price-data');
+            const volumeContainer = document.getElementById('volume-data');
+
+            let priceHTML = '<ul>';
+            for (let coin in priceData) {
+                priceHTML += `<li>${coin}: ${priceData[coin]}</li>`;
+            }
+            priceHTML += '</ul>';
+            priceContainer.innerHTML = priceHTML;
+
+            let volumeHTML = '<ul>';
+            for (let coin in volumeData) {
+                volumeHTML += `<li>${coin}: ${volumeData[coin]}</li>`;
+            }
+            volumeHTML += '</ul>';
+            volumeContainer.innerHTML = volumeHTML;
+        });
+    </script>
+</body>
+</html>
